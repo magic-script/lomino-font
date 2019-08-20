@@ -1,10 +1,7 @@
 {
   "name": "lomino-font",
   "version": "1.0.0",
-  "dependencies": {
-    "copyfiles": "^2.1.1"
-  },
   "scripts": {
-    "postinstall": "copyfiles lomino_font.ttf ../react-native-magic-script/android/src/main/res/font"
+    "postinstall": "node copy-font.js"
   }
 }
