@@ -1,12 +1,22 @@
-var fs = require('fs');
-var fontName = 'lomino_font.ttf';
-var androidBasePath = '../react-native-magic-script/android';
+var fs = require("fs");
+var fse = require("fs-extra");
+var path = require("path");
 
-// check if android folder exists
-if (fs.existsSync(androidBasePath)) {
-  // console.log('The file exists.');
-  var destFile = androidBasePath.concat('/src/main/res/font/').concat(fontName);
-  fs.copyFile(fontName, destFile, (err) => {
-	if (err) throw err;
+var currentDirPath = path.resolve();
+var basePath = currentDirPath.concat("/../../assets/fonts/");
+// check if iOS folder exists
+console.log(basePath)
+!fs.existsSync(basePath) && fs.mkdirSync(basePath);
+if (fs.existsSync(basePath)) {
+  var currentPath = path.resolve();
+  fs.readdir(currentPath, (err, files) => {
+    files.forEach(file => {
+      // double check if file is file
+      if (fs.lstatSync(file).isFile() && path.extname(file) == ".ttf") {
+        var destFile = basePath.concat(file);
+        console.log(destFile);
+        fse.copy(path.resolve(__dirname,file), destFile);
+      }
+    });
   });
 }
