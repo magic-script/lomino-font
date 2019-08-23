@@ -1,6 +1,10 @@
 {
   "name": "lomino-font",
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "dependencies": {
+    "path": "^0.12.7",
+    "fs-extra": "^8.1.0"
+  },
   "scripts": {
     "postinstall": "node copy-font.js"
   }
