@@ -4,8 +4,7 @@ var path = require("path");
 
 var currentDirPath = path.resolve();
 var basePath = currentDirPath.concat("/../../assets/fonts/");
-// check if iOS folder exists
-console.log(basePath)
+// check if assets folder exists
 !fs.existsSync(basePath) && fs.mkdirSync(basePath);
 if (fs.existsSync(basePath)) {
   var currentPath = path.resolve();
