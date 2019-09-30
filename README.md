@@ -1,10 +1,10 @@
 # lomino-font module
-A module that contains the Lomino font files that can optionally be used with a React project that utilizes the [react-native-magic-script](https://github.com/magic-script/react-native-magic-script) library. After installing this module AR components will automatically use the new font.
+A module that contains the Lomino font files that can optionally be used with a React Native project that utilizes the [react-native-magic-script](https://github.com/magic-script/react-native-magic-script) library. After installing this module, the magic-script components will automatically use the new font.
 
 ## Install steps
 Prerequisites: app should base on React-Native >= 0.60.0
-- in main folder of your app create `assets/fonts` folders (if it doesn't exist): `mkdir -p assets/fonts`
-- add `lomino-font` to your project dependencies eighter by:
+- in main folder of your app create `assets/fonts` folder (if it doesn't exist): `mkdir -p assets/fonts`
+- add `lomino-font` to your project dependencies either by:
 `yarn add git+https://github.com/magic-script/lomino-font` or `npm install --save git+https://github.com/magic-script/lomino-font`
 - execute `yarn` or `npm install`
 - create (or update if it exists) `react-native.config.js` with lines:
